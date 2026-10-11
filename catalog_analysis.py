@@ -1,8 +1,10 @@
 import math
 
 movies = [
-    {"title": "The Dune Chronicles", "year": 2021, "genres": {"sci-fi", "drama"},
-     "rating": 8.6, "duration_min": 155, "actors": ["T. Chalamet", "R. Ferguson", "O. Isaac"]},
+    {"title": "The Dune Chronicles", "year": 2021, 
+     "genres": {"sci-fi", "drama"},
+     "rating": 8.6, "duration_min": 155, 
+    "actors": ["T. Chalamet", "R. Ferguson", "O. Isaac"]},
     {"title": "Kitchen Stories", "year": 2019, "genres": {"comedy", "drama"},
      "rating": 7.1, "duration_min": 98, "actors": ["A. Novak", "M. Ferguson"]},
     {"title": "silent hours", "year": 2016, "genres": {"thriller", "drama"},
@@ -109,7 +111,8 @@ def actor_filmography(movies):
     return filmography
 def titles_above_average(movies):
     avg = average_rating(movies)
-    return {movie["title"]: movie["rating"] for movie in movies if movie["rating"] > avg}
+    return {movie["title"]: movie["rating"] 
+            for movie in movies if movie["rating"] > avg}
 def all_genres(movies):
     result = set()
     for movie in movies:
